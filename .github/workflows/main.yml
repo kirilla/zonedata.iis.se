@@ -13,36 +13,26 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-      #with:
-      #  ref: ${{ github.head_ref }}
 
-    #- name: Download file
-    #  run: |
-    #    curl -o downloaded_file.txt https://kirilla.se/misc/random
-
-    - name: Debug
-      run: |
-        pwd
-        ls -la
-
-    - name: Dig
-      run: |
-        #dig @zonedata.iis.se se AXFR > se.zone.txt
-        dig @zonedata.iis.se nu AXFR > nu.zone.txt
-
-    - name: Post-dig
-      run: |
-        find . 2>/dev/null
-
-    - name: Prune
+    - name: Chmod
       run: |
         chmod +x ./clean-zone.sh
-        #./clean-zone.sh < se.zone.txt > se.zone.clean.txt
+
+    - name: Dig .nu
+      run: |
+        dig @zonedata.iis.se nu AXFR > nu.zone.txt
+
+    - name: Dig .se
+      run: |
+        dig @zonedata.iis.se se AXFR > se.zone.txt
+
+    - name: Prune .nu
+      run: |
         ./clean-zone.sh < nu.zone.txt > nu.zone.clean.txt
 
-    - name: Post-prune
+    - name: Prune .se
       run: |
-        find . 2>/dev/null
+        ./clean-zone.sh < se.zone.txt > se.zone.clean.txt
 
     - name: Git status
       id: check_changes
@@ -61,7 +51,7 @@ jobs:
       run: |
         git config --global user.name "kirilla"
         git config --global user.email "jonas@kirilla.se"
-        #git add se.zone.clean.txt
         git add nu.zone.clean.txt
+        git add se.zone.clean.txt
         git commit -m "Update downloaded file"
         git push
