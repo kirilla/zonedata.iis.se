@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="/favicons/swords.png" />
+    
+    <title>Slumptal! - Uppsaladev</title>
+
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css?v=vnG4Qrcq6SIJIh7K5D37_A1v96zN-8s0XAEykhz7PHY" />
+
+    
+
+    
+        <script src="/lib/jquery/jquery.min.js?v=xK5SaL73cACgs9GJqxiLzVqBntcx0-JXf_deIqWrN7c" defer></script>
+        <script src="/lib/jquery-validate/jquery.validate.min.js?v=6e0N-WJiVKBeTitK1GKSwPi3rbdPpLtuqaiitZjeD2w" defer></script>
+        <script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js?v=RFWFWIIPsjB4DucR4jqwxTWw13ZmtI-s6tVR2LJmZXk" defer></script>
+        <script src="/lib/bootstrap/js/bootstrap.bundle.min.js?v=RIIp-d6RhFDpPAxTdGO_skjFbNZM0Axu-v3uBxhe1sI" defer></script>
+        <script src="/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0" defer></script>
+    
+
+    
+</head>
+<body>
+    <header>        
+        
+    <div class="container">
+    <div class="btn-toolbar mt-2" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group me-2" role="group" aria-label="First group">
+            
+            <a class="btn btn-outline-secondary" href="/">
+                <span class="navbar-logo-label">Kirilla</span>
+            </a>
+
+            <a class="btn btn-outline-secondary" href="/search">
+                🔍 <span class="navbar-label">sök</span>
+            </a>
+
+            <a class="btn btn-outline-secondary" href="/subject/all">
+                😏 <span class="navbar-label">ämnen</span>
+            </a>
+
+            <a class="btn btn-outline-secondary" href="/add/something">
+                ➕
+            </a>
+
+            <a class="btn btn-outline-secondary" href="/user/menu">
+                🫂 <span class="navbar-label">andra jävlar</span>
+            </a>
+
+            <a class="btn btn-outline-secondary" href="/misc/random">🛒</a>
+
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-outline-secondary dropdown-toggle"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                        👤 <span class="navbar-label">Konto</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="/session/signin">Logga in</a></li>
+                        <li class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="/account/signup">Skaffa konto</a></li>
+                    </ul>
+                </div>
+        </div>
+        <div class="btn-group" role="group" aria-label="Second group">
+
+        </div>
+    </div>
+</div>
+
+
+    </header>
+
+    
+
+
+<main class="container">
+
+    <h3 class="ms-2 mt-3 mb-3">Slumptal, yo!</h3>
+
+    <ul>
+            <li>
+                1836633569
+            </li>
+            <li>
+                903919586
+            </li>
+            <li>
+                227642639
+            </li>
+            <li>
+                369648585
+            </li>
+            <li>
+                1635597573
+            </li>
+            <li>
+                1780042244
+            </li>
+            <li>
+                1151029517
+            </li>
+            <li>
+                609044785
+            </li>
+            <li>
+                663879515
+            </li>
+            <li>
+                1893770841
+            </li>
+            <li>
+                644509565
+            </li>
+            <li>
+                2125812408
+            </li>
+            <li>
+                204652452
+            </li>
+            <li>
+                1988231884
+            </li>
+            <li>
+                729913317
+            </li>
+            <li>
+                2078381241
+            </li>
+            <li>
+                683764321
+            </li>
+            <li>
+                477100811
+            </li>
+            <li>
+                1962694332
+            </li>
+            <li>
+                14330469
+            </li>
+    </ul>
+
+</main>
+
+
+    
+</body>
+</html>
