@@ -25,6 +25,16 @@ jobs:
         pwd
         ls -la
 
+    - name: Dig
+      run: |
+        #dig @zonedata.iis.se se AXFR > se.zone.txt
+        dig @zonedata.iis.se nu AXFR > nu.zone.txt
+
+    - name: Prune
+      run: |
+        #./zonedata.iis.se/clean-zone.sh se.zone.txt > se.zone.clean.txt
+        ./zonedata.iis.se/clean-zone.sh nu.zone.txt > nu.zone.clean.txt
+
     - name: Commit and push changes
       run: |
         git config --global user.name "kirilla"
