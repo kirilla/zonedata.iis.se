@@ -16,9 +16,9 @@ jobs:
       #with:
       #  ref: ${{ github.head_ref }}
 
-    - name: Download file
-      run: |
-        curl -o downloaded_file.txt https://kirilla.se/misc/random
+    #- name: Download file
+    #  run: |
+    #    curl -o downloaded_file.txt https://kirilla.se/misc/random
 
     - name: Debug
       run: |
@@ -30,10 +30,18 @@ jobs:
         #dig @zonedata.iis.se se AXFR > se.zone.txt
         dig @zonedata.iis.se nu AXFR > nu.zone.txt
 
+    - name: Post-dig
+      run: |
+        find . 2>/dev/null
+
     - name: Prune
       run: |
         #./zonedata.iis.se/clean-zone.sh se.zone.txt > se.zone.clean.txt
         ./zonedata.iis.se/clean-zone.sh nu.zone.txt > nu.zone.clean.txt
+
+    - name: Post-prune
+      run: |
+        find . 2>/dev/null
 
     - name: Commit and push changes
       run: |
