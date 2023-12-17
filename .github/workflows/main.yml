@@ -61,6 +61,7 @@ jobs:
       run: |
         git config --global user.name "kirilla"
         git config --global user.email "jonas@kirilla.se"
-        git add downloaded_file.txt
+        #git add se.zone.clean.txt
+        git add nu.zone.clean.txt
         git commit -m "Update downloaded file"
         git push
