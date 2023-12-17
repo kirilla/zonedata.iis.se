@@ -1,4 +1,4 @@
-# All .SE and .NU domain names. 
+# All .SE and .NU domain names
 
 A daily backup.
 
