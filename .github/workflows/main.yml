@@ -20,7 +20,7 @@ jobs:
 
     - name: Debug
       run: |
-        pwd, ls -la
+        pwd; ls -la
 
     - name: Commit and push changes
       run: |
