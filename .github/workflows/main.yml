@@ -1,0 +1,25 @@
+name: Download and Update File
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Run once a day at midnight UTC
+
+jobs:
+  update-file:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Download file
+      run: |
+        curl -o downloaded_file.txt https://kirilla.se/misc/random
+
+    - name: Commit and push changes
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        git add downloaded_file.txt
+        git commit -m "Update downloaded file"
+        git push
