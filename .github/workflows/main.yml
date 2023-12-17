@@ -44,7 +44,20 @@ jobs:
       run: |
         find . 2>/dev/null
 
-    - name: Commit and push changes
+    - name: Git status
+      id: check_changes
+      run: |
+        git_status=$(git status --porcelain)
+        if [ -z "$git_status" ]; then
+          echo "No changes to commit."
+          echo "::set-output name=changes::false"
+        else
+          echo "There are changes to commit."
+          echo "::set-output name=changes::true"
+        fi
+
+    - name: Git commit and push
+      if: steps.check_changes.outputs.changes == 'true'
       run: |
         git config --global user.name "kirilla"
         git config --global user.email "jonas@kirilla.se"
