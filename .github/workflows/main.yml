@@ -36,8 +36,8 @@ jobs:
 
     - name: Prune
       run: |
-        #./zonedata.iis.se/clean-zone.sh se.zone.txt > se.zone.clean.txt
-        ./zonedata.iis.se/clean-zone.sh nu.zone.txt > nu.zone.clean.txt
+        #./clean-zone.sh se.zone.txt > se.zone.clean.txt
+        ./clean-zone.sh nu.zone.txt > nu.zone.clean.txt
 
     - name: Post-prune
       run: |
