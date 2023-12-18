@@ -53,5 +53,5 @@ jobs:
         git config --global user.email "jonas@kirilla.se"
         git add nu.zone.clean.txt
         git add se.zone.clean.txt
-        git commit -m "Update downloaded file"
+        git commit -m "Fetch new DNS data"
         git push
