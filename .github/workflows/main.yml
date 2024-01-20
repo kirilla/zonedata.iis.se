@@ -22,17 +22,17 @@ jobs:
       run: |
         dig @zonedata.iis.se nu AXFR > nu.zone.txt
 
-    #- name: Dig .se
-    #  run: |
-    #    dig @zonedata.iis.se se AXFR > se.zone.txt
+    - name: Dig .se
+      run: |
+        dig @zonedata.iis.se se AXFR > se.zone.txt
 
     - name: Prune .nu
       run: |
         ./clean-zone.sh < nu.zone.txt > nu.zone.clean.txt
 
-    #- name: Prune .se
-    #  run: |
-    #    ./clean-zone.sh < se.zone.txt > se.zone.clean.txt
+    - name: Prune .se
+      run: |
+        ./clean-zone.sh < se.zone.txt > se.zone.clean.txt
 
     - name: Git status
       id: check_changes
@@ -40,12 +40,10 @@ jobs:
         git_status=$(git status --porcelain)
         if [ -z "$git_status" ]; then
           echo "No changes to commit."
-          #echo "changes='false'" >> $GITHUB_STATE
-          steps.check_changes.outputs.changes == 'false'
+          echo "::set-output name=changes::false"
         else
           echo "There are changes to commit."
-          #echo "changes='true'" >> $GITHUB_STATE
-          steps.check_changes.outputs.changes == 'true'
+          echo "::set-output name=changes::true"
         fi
 
     - name: Git commit and push
