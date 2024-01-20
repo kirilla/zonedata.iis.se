@@ -40,10 +40,10 @@ jobs:
         git_status=$(git status --porcelain)
         if [ -z "$git_status" ]; then
           echo "No changes to commit."
-          echo "changes=false" >> $GITHUB_STATE
+          echo "changes='false'" >> $GITHUB_STATE
         else
           echo "There are changes to commit."
-          echo "changes=true" >> $GITHUB_STATE
+          echo "changes='true'" >> $GITHUB_STATE
         fi
 
     - name: Git commit and push
