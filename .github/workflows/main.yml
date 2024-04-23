@@ -2,7 +2,7 @@ name: Dig? Dig.
 
 on:
   schedule:
-    - cron: '33 3 * * *' # Run at 03:33 UTC
+    - cron: '33 6 * * *' # Run at 06:33 UTC
     
   workflow_dispatch:
 
